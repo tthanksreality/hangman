@@ -19,5 +19,18 @@ class Word
   end
 end
 
-murtveca = Word.new('../google-10000')
-p murtveca.select_word
+## Allows the player to guess the word
+class Guess
+  def initialize
+    @word = Word.new('../google-10000')
+    @board = @word.select_word
+    @guessed_word = '*' * @board.length
+  end
+
+  def show_word
+    @board
+  end
+end
+
+murtveca = Guess.new
+p murtveca.show_word
