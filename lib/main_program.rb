@@ -30,7 +30,11 @@ class Guess
   def show_word
     @board
   end
+
+  def show_hidden_word
+    @guessed_word
+  end
 end
 
 murtveca = Guess.new
-p murtveca.show_word
+p murtveca.show_hidden_word
