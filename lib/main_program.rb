@@ -31,10 +31,6 @@ class Guess
     @board
   end
 
-  def show_hidden_word
-    @guessed_word
-  end
-
   def check_win
     if @guessed_word.include?('*')
       puts "You are out of turns! The word was #{@board}."
